@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Auto from "./Auto" 
-import {BrowserRouter as Router, Route, Link, Redirect, useHistory} from  'react-router-dom'
+import {useHistory} from  'react-router-dom'
 
 const AddForm = ({ onAdd }) => {
   const [location, setLocation] = useState('')
@@ -35,9 +35,9 @@ const AddForm = ({ onAdd }) => {
   }
 
   //Add Submit
-const addAuto = (finishedAuto) => {
-  setLocation(prevLocation => finishedAuto)
-}
+//const addAuto = (finishedAuto) => {
+  //setLocation(prevLocation => finishedAuto)
+//}
 
   return (
     
