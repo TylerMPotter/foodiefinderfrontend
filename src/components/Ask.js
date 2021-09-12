@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Auto from "./Auto" 
 import {useHistory} from  'react-router-dom'
+//import ReCAPTCHA from "react-google-recaptcha"
 
 const AddForm = ({ onAdd }) => {
   const [location, setLocation] = useState('')
@@ -32,6 +33,10 @@ const AddForm = ({ onAdd }) => {
     console.log("hi")
 
     history.push('/about')
+  }
+
+  const handleOnChange = (value) => {
+    console.log("cap", value)
   }
 
   //Add Submit
@@ -105,12 +110,19 @@ const AddForm = ({ onAdd }) => {
             value={price}
             onChange={(e) => setPrice(e.target.value)}
             >
-              <option value="1">$</option>
-              <option value="1,2">$$</option>
-              <option value="1,2,3">$$$</option>
-              <option value="1,2,3,4">$$$$</option>
+              <option value="a">$</option>
+              <option value="b">$$</option>
+              <option value="c">$$$</option>
+              <option value="d">$$$$</option>
             </select>
           </div>
+
+       {/* //   <div>
+        //  <ReCAPTCHA
+        //    sitekey="6Lc7dhwcAAAAAPmBwc_7AAOFFfq7hf5Z3tNfJAGf"
+        //    onCap={handleOnChange}
+         //   />,
+          //</div> */}
 
           <div>
             <input type='submit' value='Find Some Food!' className='btn btn-block' />
