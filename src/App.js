@@ -7,7 +7,7 @@ import {BrowserRouter as Router, Route, Link} from  'react-router-dom'
 
 
 function App() {
-  const [tyler, setTyler] = useState(null)
+  const [tyler, setTyler] = useState("nothing is open")
 
 
   const addForm = (finishedForm) => {
