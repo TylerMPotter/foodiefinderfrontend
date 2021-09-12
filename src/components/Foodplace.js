@@ -26,7 +26,7 @@ const Foodplace = ({foodplace}) => {
         <p> {foodplace!="nothing is open" && (<p>Phone: {foodplace.display_phone}</p>)}
         {foodplace!="nothing is open" && (<p>Price: {foodplace.price}</p>)}
         {foodplace!="nothing is open" && (<p>Rating: {foodplace.rating}</p>)}
-        {foodplace!="nothing is open" && (<a href={foodplace.url}>Visit Them On Yelp!</a>)}
+        {foodplace!="nothing is open" && (<a href={foodplace.url} target="_blank"> Visit Them On Yelp!</a>)}
         </p>
         {foodplace!="nothing is open" && (<img src={foodplace.image_url} alt="Food Pic" width="200" height="200"/>)}
       </div>
